@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.5.4" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
+http://pear.php.net/dtd/tasks-1.0.xsd
+http://pear.php.net/dtd/package-2.0
+http://pear.php.net/dtd/package-2.0.xsd">
+ <name>Text_Highlighter</name>
+ <channel>pear.php.net</channel>
+ <summary>Syntax highlighting</summary>
+ <description>Text_Highlighter is a package for syntax highlighting.
+
+It provides a base class provining all the functionality, 
+and a descendent classes geneator class.
+
+The main idea is to simplify creation of subclasses
+implementing syntax highlighting for particular language.
+Subclasses do not implement any new functioanality,
+they just provide syntax highlighting rules.
+The rules sources are in XML format. 
+
+To create a highlighter for a language, there is no need
+to code a new class manually. Simply describe the rules
+in XML file and use Text_Highlighter_Generator to create
+a new class.
+ 
+ </description>
+ <lead>
+  <name>Andrey Demenev</name>
+  <user>blindman</user>
+  <email>demenev@gmail.com</email>
+  <active>yes</active>
+ </lead>
+ <date>2007-06-02</date>
+ <time>19:27:04</time>
+ <version>
+  <release>0.6.9</release>
+  <api>0.6.9</api>
+ </version>
+ <stability>
+  <release>beta</release>
+  <api>beta</api>
+ </stability>
+ <license uri="http://www.php.net/license">PHP License</license>
+ <notes>fixed bug #6691 -- generate.bat can&apos;t work
+  
+ </notes>
+ <contents>
+  <dir name="/">
+   <dir name="Highlighter">
+    <dir name="Renderer">
+     <file baseinstalldir="Text" name="Array.php" role="php">
+      <tasks:replace from="@package_version@" to="version" type="package-info" />
+     </file>
+     <file baseinstalldir="Text" name="BB.php" role="php">
+      <tasks:replace from="@package_version@" to="version" type="package-info" />
+     </file>
+     <file baseinstalldir="Text" name="Console.php" role="php">
+      <tasks:replace from="@package_version@" to="version" type="package-info" />
+     </file>
+     <file baseinstalldir="Text" name="Html.php" role="php">
+      <tasks:replace from="@package_version@" to="version" type="package-info" />
+     </file>
+     <file baseinstalldir="Text" name="HtmlTags.php" role="php">
+      <tasks:replace from="@package_version@" to="version" type="package-info" />
+     </file>
+     <file baseinstalldir="Text" name="JSON.php" role="php">
+      <tasks:replace from="@package_version@" to="version" type="package-info" />
+     </file>
+     <file baseinstalldir="Text" name="XML.php" role="php">
+      <tasks:replace from="@package_version@" to="version" type="package-info" />
+     </file>
+    </dir> <!-- //Highlighter/Renderer -->
+    <file baseinstalldir="Text" name="ABAP.php" role="php">
+     <tasks:replace from="@package_version@" to="version" type="package-info" />
+    </file>
+    <file baseinstalldir="Text" name="CPP.php" role="php">
+     <tasks:replace from="@package_version@" to="version" type="package-info" />
+    </file>
+    <file baseinstalldir="Text" name="CSS.php" role="php">
+     <tasks:replace from="@package_version@" to="version" type="package-info" />
+    </file>
+    <file baseinstalldir="Text" name="DIFF.php" role="php">
+     <tasks:replace from="@package_version@" to="version" type="package-info" />
+    </file>
+    <file baseinstalldir="Text" name="DTD.php" role="php">
+     <tasks:replace from="@package_version@" to="version" type="package-info" />
+    </file>
+    <file baseinstalldir="Text" name="Generator.php" role="php">
+     <tasks:replace from="@package_version@" to="version" type="package-info" />
+    </file>
+    <file baseinstalldir="Text" name="HTML.php" role="php">
+     <tasks:replace from="@package_version@" to="version" type="package-info" />
+    </file>
+    <file baseinstalldir="Text" name="JAVA.php" role="php">
+     <tasks:replace from="@package_version@" to="version" type="package-info" />
+    </file>
+    <file baseinstalldir="Text" name="JAVASCRIPT.php" role="php">
+     <tasks:replace from="@package_version@" to="version" type="package-info" />
+    </file>
+    <file baseinstalldir="Text" name="MYSQL.php" role="php">
+     <tasks:replace from="@package_version@" to="version" type="package-info" />
+    </file>
+    <file baseinstalldir="Text" name="PERL.php" role="php">
+     <tasks:replace from="@package_version@" to="version" type="package-info" />
+    </file>
+    <file baseinstalldir="Text" name="PHP.php" role="php">
+     <tasks:replace from="@package_version@" to="version" type="package-info" />
+    </file>
+    <file baseinstalldir="Text" name="PYTHON.php" role="php">
+     <tasks:replace from="@package_version@" to="version" type="package-info" />
+    </file>
+    <file baseinstalldir="Text" name="Renderer.php" role="php">
+     <tasks:replace from="@package_version@" to="version" type="package-info" />
+    </file>
+    <file baseinstalldir="Text" name="RUBY.php" role="php">
+     <tasks:replace from="@package_version@" to="version" type="package-info" />
+    </file>
+    <file baseinstalldir="Text" name="SQL.php" role="php">
+     <tasks:replace from="@package_version@" to="version" type="package-info" />
+    </file>
+    <file baseinstalldir="Text" name="XML.php" role="php">
+     <tasks:replace from="@package_version@" to="version" type="package-info" />
+    </file>
+   </dir> <!-- //Highlighter -->
+   <file baseinstalldir="Text" name="abap.xml" role="data" />
+   <file baseinstalldir="Text" name="cpp.xml" role="data" />
+   <file baseinstalldir="Text" name="css.xml" role="data" />
+   <file baseinstalldir="Text" name="diff.xml" role="data" />
+   <file baseinstalldir="Text" name="dtd.xml" role="data" />
+   <file baseinstalldir="Text/Highlighter" name="generate" role="script">
+    <tasks:replace from="@php_dir@" to="php_dir" type="pear-config" />
+    <tasks:replace from="@php_bin@" to="php_bin" type="pear-config" />
+   </file>
+   <file baseinstalldir="Text/Highlighter" name="generate.bat" role="script">
+    <tasks:replace from="@bin_dir@" to="bin_dir" type="pear-config" />
+    <tasks:replace from="@php_bin@" to="php_bin" type="pear-config" />
+    <tasks:replace from="@php_dir@" to="php_dir" type="pear-config" />
+   </file>
+   <file baseinstalldir="Text" name="Highlighter.php" role="php">
+    <tasks:replace from="@package_version@" to="version" type="package-info" />
+   </file>
+   <file baseinstalldir="Text" name="html.xml" role="data" />
+   <file baseinstalldir="Text" name="java.xml" role="data" />
+   <file baseinstalldir="Text" name="javascript.xml" role="data" />
+   <file baseinstalldir="Text" name="mysql.xml" role="data" />
+   <file baseinstalldir="Text" name="perl.xml" role="data" />
+   <file baseinstalldir="Text" name="php.xml" role="data" />
+   <file baseinstalldir="Text" name="python.xml" role="data" />
+   <file baseinstalldir="Text" name="README" role="doc" />
+   <file baseinstalldir="Text" name="ruby.xml" role="data" />
+   <file baseinstalldir="Text" name="sql.xml" role="data" />
+   <file baseinstalldir="Text" name="TODO" role="data" />
+   <file baseinstalldir="Text" name="xml.xml" role="data" />
+  </dir> <!-- / -->
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>4.3.3</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.0b1</min>
+   </pearinstaller>
+   <package>
+    <name>PEAR</name>
+    <channel>pear.php.net</channel>
+    <min>1.0</min>
+   </package>
+   <package>
+    <name>XML_Parser</name>
+    <channel>pear.php.net</channel>
+    <min>1.0.1</min>
+   </package>
+   <package>
+    <name>Console_Getopt</name>
+    <channel>pear.php.net</channel>
+    <min>1.0</min>
+   </package>
+  </required>
+ </dependencies>
+ <phprelease>
+  <installconditions>
+   <os>
+    <name>(*ix|*ux)</name>
+   </os>
+  </installconditions>
+  <filelist>
+   <ignore name="generate.bat" />
+  </filelist>
+ </phprelease>
+ <phprelease>
+  <installconditions>
+   <os>
+    <name>windows</name>
+   </os>
+  </installconditions>
+  <filelist>
+   <ignore name="generate" />
+  </filelist>
+ </phprelease>
+ <phprelease>
+  <filelist>
+   <ignore name="generate" />
+   <ignore name="generate.bat" />
+  </filelist>
+ </phprelease>
+ <changelog>
+  <release>
+   <version>
+    <release>0.6.9</release>
+    <api>0.6.9</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2007-06-02</date>
+   <license uri="http://www.php.net/license">PHP License</license>
+   <notes>fixed bug #6691 -- generate.bat can&apos;t work
+    
+   </notes>
+  </release>
+ </changelog>
+</package>
