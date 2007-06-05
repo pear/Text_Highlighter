@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<!-- $Id: javascript.xml,v 1.1 2007-06-03 02:35:28 ssttoo Exp $ -->
+<!-- $Id: javascript.xml,v 1.2 2007-06-05 21:57:21 ssttoo Exp $ -->
 
 <highlight lang="javascript" case = "no">
 
@@ -38,19 +38,9 @@
     <onlyin region="strdouble"/>
   </block>
 
-  <block name="reescaped" match="\\\/" innerClass="special" contained="yes">
-    <onlyin region="regexp"/>
-  </block>
-
-
   <region name="comment" start="\/\/" end="/$/m" innerClass="comment">
     <contains block="cvstag"/>
   </region>
-
-  <region name="regexp" start="\/" end="\/g?i?" innerClass="string" delimClass="quotes" case="yes">
-    <contains block="reescaped"/>
-  </region>
-
 
   <block name="identifier" match="[a-z_]\w*" innerClass="identifier" case="no"/>
 
@@ -60,17 +50,17 @@
     <onlyin region="mlcomment"/>
     <onlyin region="comment"/>
   </block>
-  
+
   <block name="email" match="\w+[\.\w\-]+@(\w+[\.\w\-])+" innerClass="url" contained="yes">
     <onlyin region="mlcomment"/>
     <onlyin region="comment"/>
   </block>
-  
+
   <block name="note" match="\b(note|fixme):" innerClass="inlinedoc" contained="yes" case="no">
     <onlyin region="mlcomment"/>
     <onlyin region="comment"/>
   </block>
-  
+
 
   <block name="cvstag" match="\$\w+:.+\$" innerClass="inlinedoc" contained="yes">
     <onlyin region="mlcomment"/>
@@ -178,6 +168,6 @@
     <keyword match="true"/>
     <keyword match="try"/>
     <keyword match="volatile"/>
-  </keywords> 
+  </keywords>
 
 </highlight>
