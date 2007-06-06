@@ -59,23 +59,36 @@ if ($gen->hasErrors()) {
 }
 
 
-$version = '0.6.9';
+$version = '0.7.0';
 $state = 'beta';
 $notes = <<<NOTES
-fixed bug #6691 -- generate.bat can't work
+- added new renderer - Array
+- HTML renderer modified to extend Array
+- more new renderers - BB, HTMLTags, JSON, XML, all extending Array
+(feature requests #8704 and #9188 )
+- new syntax definition - ABAP programming language (feature request #8809)
+- linked elements to their online documentation option (request #7480)
+- option to output code as unordered list (request #4640)
+- option to set starting number when outputting code in ordered lists
+(request #7077)
+- option to set CSS class names mapping insead of using hardcoded
+class names (request #7077)
+- option to set a CSS style mappping instead of class names (request #7077)
+- fixed /= issue when highlighting javascript (bug #11160)
+- added sample CSS to the package (bug #11211)
 NOTES;
 
 $description = <<<DESC
 Text_Highlighter is a package for syntax highlighting.
 
-It provides a base class provining all the functionality, 
+It provides a base class provining all the functionality,
 and a descendent classes geneator class.
 
 The main idea is to simplify creation of subclasses
 implementing syntax highlighting for particular language.
 Subclasses do not implement any new functioanality,
 they just provide syntax highlighting rules.
-The rules sources are in XML format. 
+The rules sources are in XML format.
 
 To create a highlighter for a language, there is no need
 to code a new class manually. Simply describe the rules
@@ -136,6 +149,7 @@ foreach ($patterns as $pattern) {
 
 
 
+$packagexml->addMaintainer('stoyan', 'lead', 'Stoyan Stefanov', 'ssttoo@gmail.com');
 $packagexml->addMaintainer('blindman', 'lead', 'Andrey Demenev', 'demenev@gmail.com');
 
 $packagexml->addPlatformException ('generate', '(*ix|*ux)');
