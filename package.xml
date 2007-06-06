@@ -8,14 +8,14 @@ http://pear.php.net/dtd/package-2.0.xsd">
  <summary>Syntax highlighting</summary>
  <description>Text_Highlighter is a package for syntax highlighting.
 
-It provides a base class provining all the functionality, 
+It provides a base class provining all the functionality,
 and a descendent classes geneator class.
 
 The main idea is to simplify creation of subclasses
 implementing syntax highlighting for particular language.
 Subclasses do not implement any new functioanality,
 they just provide syntax highlighting rules.
-The rules sources are in XML format. 
+The rules sources are in XML format.
 
 To create a highlighter for a language, there is no need
 to code a new class manually. Simply describe the rules
@@ -24,23 +24,42 @@ a new class.
  
  </description>
  <lead>
+  <name>Stoyan Stefanov</name>
+  <user>stoyan</user>
+  <email>ssttoo@gmail.com</email>
+  <active>yes</active>
+ </lead>
+ <lead>
   <name>Andrey Demenev</name>
   <user>blindman</user>
   <email>demenev@gmail.com</email>
   <active>yes</active>
  </lead>
- <date>2007-06-02</date>
- <time>19:27:04</time>
+ <date>2007-06-05</date>
+ <time>18:29:24</time>
  <version>
-  <release>0.6.9</release>
-  <api>0.6.9</api>
+  <release>0.7.0</release>
+  <api>0.7.0</api>
  </version>
  <stability>
   <release>beta</release>
   <api>beta</api>
  </stability>
  <license uri="http://www.php.net/license">PHP License</license>
- <notes>fixed bug #6691 -- generate.bat can&apos;t work
+ <notes>- added new renderer - Array
+- HTML renderer modified to extend Array
+- more new renderers - BB, HTMLTags, JSON, XML, all extending Array
+(feature requests #8704 and #9188 )
+- new syntax definition - ABAP programming language (feature request #8809)
+- linked elements to their online documentation option (request #7480)
+- option to output code as unordered list (request #4640)
+- option to set starting number when outputting code in ordered lists
+(request #7077)
+- option to set CSS class names mapping insead of using hardcoded
+class names (request #7077)
+- option to set a CSS style mappping instead of class names (request #7077)
+- fixed /= issue when highlighting javascript (bug #11160)
+- added sample CSS to the package (bug #11211)
   
  </notes>
  <contents>
@@ -126,6 +145,9 @@ a new class.
    <file baseinstalldir="Text" name="css.xml" role="data" />
    <file baseinstalldir="Text" name="diff.xml" role="data" />
    <file baseinstalldir="Text" name="dtd.xml" role="data" />
+   <file baseinstalldir="Text" name="gen.php" role="php">
+    <tasks:replace from="@package_version@" to="version" type="package-info" />
+   </file>
    <file baseinstalldir="Text/Highlighter" name="generate" role="script">
     <tasks:replace from="@php_dir@" to="php_dir" type="pear-config" />
     <tasks:replace from="@php_bin@" to="php_bin" type="pear-config" />
@@ -142,6 +164,7 @@ a new class.
    <file baseinstalldir="Text" name="java.xml" role="data" />
    <file baseinstalldir="Text" name="javascript.xml" role="data" />
    <file baseinstalldir="Text" name="mysql.xml" role="data" />
+   <file baseinstalldir="Text" name="package.xml1" role="data" />
    <file baseinstalldir="Text" name="perl.xml" role="data" />
    <file baseinstalldir="Text" name="php.xml" role="data" />
    <file baseinstalldir="Text" name="python.xml" role="data" />
@@ -206,16 +229,29 @@ a new class.
  <changelog>
   <release>
    <version>
-    <release>0.6.9</release>
-    <api>0.6.9</api>
+    <release>0.7.0</release>
+    <api>0.7.0</api>
    </version>
    <stability>
     <release>beta</release>
     <api>beta</api>
    </stability>
-   <date>2007-06-02</date>
+   <date>2007-06-05</date>
    <license uri="http://www.php.net/license">PHP License</license>
-   <notes>fixed bug #6691 -- generate.bat can&apos;t work
+   <notes>- added new renderer - Array
+- HTML renderer modified to extend Array
+- more new renderers - BB, HTMLTags, JSON, XML, all extending Array
+(feature requests #8704 and #9188 )
+- new syntax definition - ABAP programming language (feature request #8809)
+- linked elements to their online documentation option (request #7480)
+- option to output code as unordered list (request #4640)
+- option to set starting number when outputting code in ordered lists
+(request #7077)
+- option to set CSS class names mapping insead of using hardcoded
+class names (request #7077)
+- option to set a CSS style mappping instead of class names (request #7077)
+- fixed /= issue when highlighting javascript (bug #11160)
+- added sample CSS to the package (bug #11211)
     
    </notes>
   </release>
