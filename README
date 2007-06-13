@@ -310,7 +310,7 @@ itself does not provide information about actual colors of highlighted text.
 Instead, <span class="hl-XXX"> is used, where XXX is replaced with color group
 name (hl-var, hl-string, etc.). It is up to you to create a CSS stylesheet.
 If 'use_language' option with value evaluating to true was passed, class names
-will be formatted as "hl-LANG-XXX", where LANG is language name as defined in
+will be formatted as "LANG-hl-XXX", where LANG is language name as defined in
 highlighter XML source ("lang" attribute of <highlight> tag) in lower case.
 
 There are 3 special CSS classes:
