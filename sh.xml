@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+<!-- $Id: sh.xml,v 1.2 2007-06-14 00:15:50 ssttoo Exp $ -->
 
 <highlight lang="sh" case = "yes">
 
