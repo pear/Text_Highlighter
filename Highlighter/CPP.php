@@ -20,7 +20,7 @@
  * @link       http://pear.php.net/package/Text_Highlighter
  * @category   Text
  * @package    Text_Highlighter
- * @version    generated from: : cpp.xml 24 2005-04-16 09:10:28Z andrey 
+ * @version    generated from: : cpp.xml,v 1.1 2007/06/03 02:35:28 ssttoo Exp 
  * @author Aaron Kalin
  * @author Andrey Demenev <demenev@gmail.com>
  *

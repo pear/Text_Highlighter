@@ -15,7 +15,7 @@
  * @link       http://pear.php.net/package/Text_Highlighter
  * @category   Text
  * @package    Text_Highlighter
- * @version    generated from: : xml.xml 45 2005-09-21 15:20:38Z andrey 
+ * @version    generated from: : xml.xml,v 1.1 2007/06/03 02:35:28 ssttoo Exp 
  * @author Andrey Demenev <demenev@gmail.com>
  *
  */
