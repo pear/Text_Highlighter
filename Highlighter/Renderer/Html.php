@@ -293,10 +293,22 @@ class Text_Highlighter_Renderer_Html extends Text_Highlighter_Renderer_Array
 
         $html_output = '';
 
+        $numbers_li = false;
+
+        if (
+            $this->_numbers == HL_NUMBERS_LI ||
+            $this->_numbers == HL_NUMBERS_UL ||
+            $this->_numbers == HL_NUMBERS_OL
+           )
+        {
+            $numbers_li = true;
+        }
+
         // loop through each class=>content pair
         foreach ($output AS $token) {
 
             if ($this->_enumerated) {
+                $key = false;
                 $the_class = $token[0];
                 $content = $token[1];
             } else {
@@ -308,24 +320,27 @@ class Text_Highlighter_Renderer_Html extends Text_Highlighter_Renderer_Array
             $span = $this->_getStyling($the_class);
             $decorated_output = $this->_decorate($content, $key);
 
-            $html_output .= sprintf($span, $decorated_output);
+
+            if ($numbers_li == true) {
+                // end span tags before end of li, and re-open on next line
+                $lastSpanTag = str_replace("%s</span>", "", $span);
+                $span = sprintf($span, $decorated_output);
+                $span = str_replace("\n", "</span></li>\n<li>$lastSpanTag&nbsp;", $span);
+                $html_output .= $span;
+            } else {
+                $html_output .= sprintf($span, $decorated_output);
+            }
+
 
         }
 
         // format lists
-        if (!empty($this->_numbers) &&
-            (
-            $this->_numbers == HL_NUMBERS_LI ||
-            $this->_numbers == HL_NUMBERS_UL ||
-            $this->_numbers == HL_NUMBERS_OL
-            )
-        ) {
+        if (!empty($this->_numbers) && $numbers_li == true) {
 
 
             // additional whitespace for browsers that do not display
             // empty list items correctly
-            $this->_output = '<li>&nbsp;' . str_replace("\n", "</li>\n<li>&nbsp;", $html_output) . '</li>';
-
+            $this->_output = '<li>&nbsp;' . $html_output . '</li>';
 
             $start = '';
             if ($this->_numbers == HL_NUMBERS_OL && intval($this->_numbers_start) > 0)  {
@@ -378,7 +393,7 @@ class Text_Highlighter_Renderer_Html extends Text_Highlighter_Renderer_Array
      * @access public
      *
      */
-    function _decorate($content, $key)
+    function _decorate($content, $key = false)
     {
         // links to online documentation
         if (!empty($this->_doclinks) &&
