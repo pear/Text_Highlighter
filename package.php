@@ -59,23 +59,12 @@ if ($gen->hasErrors()) {
 }
 
 
-$version = '0.7.0';
+$version = '0.7.1';
 $state = 'beta';
 $notes = <<<NOTES
-- added new renderer - Array
-- HTML renderer modified to extend Array
-- more new renderers - BB, HTMLTags, JSON, XML, all extending Array
-(feature requests #8704 and #9188 )
-- new syntax definition - ABAP programming language (feature request #8809)
-- linked elements to their online documentation option (request #7480)
-- option to output code as unordered list (request #4640)
-- option to set starting number when outputting code in ordered lists
-(request #7077)
-- option to set CSS class names mapping insead of using hardcoded
-class names (request #7077)
-- option to set a CSS style mappping instead of class names (request #7077)
-- fixed /= issue when highlighting javascript (bug #11160)
-- added sample CSS to the package (bug #11211)
+- added new syntax definition - VBScript, thanks to sirzooro (Daniel Fruzynski)
+- fixed bug #12284 (hex numbers not recognized in JS)
+- fixed bug #12085 (comments not recognized in CSS)
 NOTES;
 
 $description = <<<DESC

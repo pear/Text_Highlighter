@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package packagerversion="1.5.4" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
+<package packagerversion="1.6.1" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
 http://pear.php.net/dtd/tasks-1.0.xsd
 http://pear.php.net/dtd/package-2.0
 http://pear.php.net/dtd/package-2.0.xsd">
@@ -35,35 +35,27 @@ a new class.
   <email>demenev@gmail.com</email>
   <active>yes</active>
  </lead>
- <date>2007-06-05</date>
- <time>18:29:24</time>
+ <date>2008-01-01</date>
+ <time>16:08:02</time>
  <version>
-  <release>0.7.0</release>
-  <api>0.7.0</api>
+  <release>0.7.1</release>
+  <api>0.7.1</api>
  </version>
  <stability>
   <release>beta</release>
   <api>beta</api>
  </stability>
  <license uri="http://www.php.net/license">PHP License</license>
- <notes>- added new renderer - Array
-- HTML renderer modified to extend Array
-- more new renderers - BB, HTMLTags, JSON, XML, all extending Array
-(feature requests #8704 and #9188 )
-- new syntax definition - ABAP programming language (feature request #8809)
-- linked elements to their online documentation option (request #7480)
-- option to output code as unordered list (request #4640)
-- option to set starting number when outputting code in ordered lists
-(request #7077)
-- option to set CSS class names mapping insead of using hardcoded
-class names (request #7077)
-- option to set a CSS style mappping instead of class names (request #7077)
-- fixed /= issue when highlighting javascript (bug #11160)
-- added sample CSS to the package (bug #11211)
+ <notes>- added new syntax definition - VBScript, thanks to sirzooro (Daniel Fruzynski)
+- fixed bug #12284 (hex numbers not recognized in JS)
+- fixed bug #12085 (comments not recognized in CSS)
   
  </notes>
  <contents>
   <dir name="/">
+   <dir name="examples">
+    <file baseinstalldir="Text" name="test.php" role="php" />
+   </dir> <!-- /examples -->
    <dir name="Highlighter">
     <dir name="Renderer">
      <file baseinstalldir="Text" name="Array.php" role="php">
@@ -87,7 +79,7 @@ class names (request #7077)
      <file baseinstalldir="Text" name="XML.php" role="php">
       <tasks:replace from="@package_version@" to="version" type="package-info" />
      </file>
-    </dir> <!-- //Highlighter/Renderer -->
+    </dir> <!-- /Highlighter/Renderer -->
     <file baseinstalldir="Text" name="ABAP.php" role="php">
      <tasks:replace from="@package_version@" to="version" type="package-info" />
     </file>
@@ -133,21 +125,24 @@ class names (request #7077)
     <file baseinstalldir="Text" name="RUBY.php" role="php">
      <tasks:replace from="@package_version@" to="version" type="package-info" />
     </file>
+    <file baseinstalldir="Text" name="SH.php" role="php">
+     <tasks:replace from="@package_version@" to="version" type="package-info" />
+    </file>
     <file baseinstalldir="Text" name="SQL.php" role="php">
+     <tasks:replace from="@package_version@" to="version" type="package-info" />
+    </file>
+    <file baseinstalldir="Text" name="VBSCRIPT.php" role="php">
      <tasks:replace from="@package_version@" to="version" type="package-info" />
     </file>
     <file baseinstalldir="Text" name="XML.php" role="php">
      <tasks:replace from="@package_version@" to="version" type="package-info" />
     </file>
-   </dir> <!-- //Highlighter -->
+   </dir> <!-- /Highlighter -->
    <file baseinstalldir="Text" name="abap.xml" role="data" />
    <file baseinstalldir="Text" name="cpp.xml" role="data" />
    <file baseinstalldir="Text" name="css.xml" role="data" />
    <file baseinstalldir="Text" name="diff.xml" role="data" />
    <file baseinstalldir="Text" name="dtd.xml" role="data" />
-   <file baseinstalldir="Text" name="gen.php" role="php">
-    <tasks:replace from="@package_version@" to="version" type="package-info" />
-   </file>
    <file baseinstalldir="Text/Highlighter" name="generate" role="script">
     <tasks:replace from="@php_dir@" to="php_dir" type="pear-config" />
     <tasks:replace from="@php_bin@" to="php_bin" type="pear-config" />
@@ -170,8 +165,11 @@ class names (request #7077)
    <file baseinstalldir="Text" name="python.xml" role="data" />
    <file baseinstalldir="Text" name="README" role="doc" />
    <file baseinstalldir="Text" name="ruby.xml" role="data" />
+   <file baseinstalldir="Text" name="sample.css" role="data" />
+   <file baseinstalldir="Text" name="sh.xml" role="data" />
    <file baseinstalldir="Text" name="sql.xml" role="data" />
    <file baseinstalldir="Text" name="TODO" role="data" />
+   <file baseinstalldir="Text" name="vbscript.xml" role="data" />
    <file baseinstalldir="Text" name="xml.xml" role="data" />
   </dir> <!-- / -->
  </contents>
@@ -229,29 +227,18 @@ class names (request #7077)
  <changelog>
   <release>
    <version>
-    <release>0.7.0</release>
-    <api>0.7.0</api>
+    <release>0.7.1</release>
+    <api>0.7.1</api>
    </version>
    <stability>
     <release>beta</release>
     <api>beta</api>
    </stability>
-   <date>2007-06-05</date>
+   <date>2008-01-01</date>
    <license uri="http://www.php.net/license">PHP License</license>
-   <notes>- added new renderer - Array
-- HTML renderer modified to extend Array
-- more new renderers - BB, HTMLTags, JSON, XML, all extending Array
-(feature requests #8704 and #9188 )
-- new syntax definition - ABAP programming language (feature request #8809)
-- linked elements to their online documentation option (request #7480)
-- option to output code as unordered list (request #4640)
-- option to set starting number when outputting code in ordered lists
-(request #7077)
-- option to set CSS class names mapping insead of using hardcoded
-class names (request #7077)
-- option to set a CSS style mappping instead of class names (request #7077)
-- fixed /= issue when highlighting javascript (bug #11160)
-- added sample CSS to the package (bug #11211)
+   <notes>- added new syntax definition - VBScript, thanks to sirzooro (Daniel Fruzynski)
+- fixed bug #12284 (hex numbers not recognized in JS)
+- fixed bug #12085 (comments not recognized in CSS)
     
    </notes>
   </release>
