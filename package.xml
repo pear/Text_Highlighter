@@ -36,7 +36,7 @@ a new class.
   <active>yes</active>
  </lead>
  <date>2008-01-01</date>
- <time>16:08:02</time>
+ <time>16:22:26</time>
  <version>
   <release>0.7.1</release>
   <api>0.7.1</api>
@@ -53,9 +53,6 @@ a new class.
  </notes>
  <contents>
   <dir name="/">
-   <dir name="examples">
-    <file baseinstalldir="Text" name="test.php" role="php" />
-   </dir> <!-- /examples -->
    <dir name="Highlighter">
     <dir name="Renderer">
      <file baseinstalldir="Text" name="Array.php" role="php">
@@ -79,7 +76,7 @@ a new class.
      <file baseinstalldir="Text" name="XML.php" role="php">
       <tasks:replace from="@package_version@" to="version" type="package-info" />
      </file>
-    </dir> <!-- /Highlighter/Renderer -->
+    </dir> <!-- //Highlighter/Renderer -->
     <file baseinstalldir="Text" name="ABAP.php" role="php">
      <tasks:replace from="@package_version@" to="version" type="package-info" />
     </file>
@@ -137,7 +134,7 @@ a new class.
     <file baseinstalldir="Text" name="XML.php" role="php">
      <tasks:replace from="@package_version@" to="version" type="package-info" />
     </file>
-   </dir> <!-- /Highlighter -->
+   </dir> <!-- //Highlighter -->
    <file baseinstalldir="Text" name="abap.xml" role="data" />
    <file baseinstalldir="Text" name="cpp.xml" role="data" />
    <file baseinstalldir="Text" name="css.xml" role="data" />
@@ -159,7 +156,6 @@ a new class.
    <file baseinstalldir="Text" name="java.xml" role="data" />
    <file baseinstalldir="Text" name="javascript.xml" role="data" />
    <file baseinstalldir="Text" name="mysql.xml" role="data" />
-   <file baseinstalldir="Text" name="package.xml1" role="data" />
    <file baseinstalldir="Text" name="perl.xml" role="data" />
    <file baseinstalldir="Text" name="php.xml" role="data" />
    <file baseinstalldir="Text" name="python.xml" role="data" />
