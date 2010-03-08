@@ -56,7 +56,7 @@ define ('TEXT_HIGHLIGHTER_FILE_READ',        12);
 * Usage example
 * <code>
 *require_once 'Text/Highlighter/Generator.php';
-*$generator =& new Text_Highlighter_Generator('php.xml');
+*$generator = new Text_Highlighter_Generator('php.xml');
 *$generator->generate();
 *$generator->saveCode('PHP.php');
 * </code>

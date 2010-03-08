@@ -35,7 +35,7 @@ foreach ($source as $i => $xmlfile)
         die($xmlfile . ' : no Id CVS tag found');
     }
     $cvsid = $m[1];
-    $gen =& new Text_Highlighter_Generator;
+    $gen = new Text_Highlighter_Generator;
     $gen->setInputFile($xmlfile);
     if ($gen->hasErrors()) {
         break;

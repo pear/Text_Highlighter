@@ -111,7 +111,7 @@ if ($dir && substr($dir,-1)!='/' && substr($dir,-1)!=='\\' ) {
 
 foreach ($source as $i => $xmlfile)
 {
-    $gen =& new Text_Highlighter_Generator;
+    $gen = new Text_Highlighter_Generator;
     $gen->setInputFile($xmlfile);
     if ($gen->hasErrors()) {
         break;
