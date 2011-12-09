@@ -52,10 +52,10 @@ a new class.
   
  </notes>
  <contents>
-  <dir name="/">
+  <dir baseinstalldir="/" name="/">
    <dir name="Highlighter">
     <dir name="Renderer">
-     <file baseinstalldir="Text" name="Array.php" role="php">
+     <file baseinstalldir="" name="Array.php" role="php">
       <tasks:replace from="@package_version@" to="version" type="package-info" />
      </file>
      <file baseinstalldir="Text" name="BB.php" role="php">
