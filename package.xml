@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package packagerversion="1.6.1" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
-http://pear.php.net/dtd/tasks-1.0.xsd
-http://pear.php.net/dtd/package-2.0
-http://pear.php.net/dtd/package-2.0.xsd">
+<package packagerversion="1.9.4" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
  <name>Text_Highlighter</name>
  <channel>pear.php.net</channel>
  <summary>Syntax highlighting</summary>
@@ -20,9 +17,7 @@ The rules sources are in XML format.
 To create a highlighter for a language, there is no need
 to code a new class manually. Simply describe the rules
 in XML file and use Text_Highlighter_Generator to create
-a new class.
- 
- </description>
+a new class.</description>
  <lead>
   <name>Stoyan Stefanov</name>
   <user>stoyan</user>
@@ -35,8 +30,8 @@ a new class.
   <email>demenev@gmail.com</email>
   <active>yes</active>
  </lead>
- <date>2008-01-01</date>
- <time>16:22:26</time>
+ <date>2011-12-09</date>
+ <time>19:04:38</time>
  <version>
   <release>0.7.1</release>
   <api>0.7.1</api>
@@ -46,128 +41,73 @@ a new class.
   <api>beta</api>
  </stability>
  <license uri="http://www.php.net/license">PHP License</license>
- <notes>- added new syntax definition - VBScript, thanks to sirzooro (Daniel Fruzynski)
+ <notes>
+- added new syntax definition - VBScript, thanks to sirzooro (Daniel Fruzynski)
 - fixed bug #12284 (hex numbers not recognized in JS)
 - fixed bug #12085 (comments not recognized in CSS)
-  
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
-   <dir name="Highlighter">
-    <dir name="Renderer">
-     <file baseinstalldir="" name="Array.php" role="php">
-      <tasks:replace from="@package_version@" to="version" type="package-info" />
-     </file>
-     <file baseinstalldir="Text" name="BB.php" role="php">
-      <tasks:replace from="@package_version@" to="version" type="package-info" />
-     </file>
-     <file baseinstalldir="Text" name="Console.php" role="php">
-      <tasks:replace from="@package_version@" to="version" type="package-info" />
-     </file>
-     <file baseinstalldir="Text" name="Html.php" role="php">
-      <tasks:replace from="@package_version@" to="version" type="package-info" />
-     </file>
-     <file baseinstalldir="Text" name="HtmlTags.php" role="php">
-      <tasks:replace from="@package_version@" to="version" type="package-info" />
-     </file>
-     <file baseinstalldir="Text" name="JSON.php" role="php">
-      <tasks:replace from="@package_version@" to="version" type="package-info" />
-     </file>
-     <file baseinstalldir="Text" name="XML.php" role="php">
-      <tasks:replace from="@package_version@" to="version" type="package-info" />
-     </file>
-    </dir> <!-- //Highlighter/Renderer -->
-    <file baseinstalldir="Text" name="ABAP.php" role="php">
-     <tasks:replace from="@package_version@" to="version" type="package-info" />
-    </file>
-    <file baseinstalldir="Text" name="CPP.php" role="php">
-     <tasks:replace from="@package_version@" to="version" type="package-info" />
-    </file>
-    <file baseinstalldir="Text" name="CSS.php" role="php">
-     <tasks:replace from="@package_version@" to="version" type="package-info" />
-    </file>
-    <file baseinstalldir="Text" name="DIFF.php" role="php">
-     <tasks:replace from="@package_version@" to="version" type="package-info" />
-    </file>
-    <file baseinstalldir="Text" name="DTD.php" role="php">
-     <tasks:replace from="@package_version@" to="version" type="package-info" />
-    </file>
-    <file baseinstalldir="Text" name="Generator.php" role="php">
-     <tasks:replace from="@package_version@" to="version" type="package-info" />
-    </file>
-    <file baseinstalldir="Text" name="HTML.php" role="php">
-     <tasks:replace from="@package_version@" to="version" type="package-info" />
-    </file>
-    <file baseinstalldir="Text" name="JAVA.php" role="php">
-     <tasks:replace from="@package_version@" to="version" type="package-info" />
-    </file>
-    <file baseinstalldir="Text" name="JAVASCRIPT.php" role="php">
-     <tasks:replace from="@package_version@" to="version" type="package-info" />
-    </file>
-    <file baseinstalldir="Text" name="MYSQL.php" role="php">
-     <tasks:replace from="@package_version@" to="version" type="package-info" />
-    </file>
-    <file baseinstalldir="Text" name="PERL.php" role="php">
-     <tasks:replace from="@package_version@" to="version" type="package-info" />
-    </file>
-    <file baseinstalldir="Text" name="PHP.php" role="php">
-     <tasks:replace from="@package_version@" to="version" type="package-info" />
-    </file>
-    <file baseinstalldir="Text" name="PYTHON.php" role="php">
-     <tasks:replace from="@package_version@" to="version" type="package-info" />
-    </file>
-    <file baseinstalldir="Text" name="Renderer.php" role="php">
-     <tasks:replace from="@package_version@" to="version" type="package-info" />
-    </file>
-    <file baseinstalldir="Text" name="RUBY.php" role="php">
-     <tasks:replace from="@package_version@" to="version" type="package-info" />
-    </file>
-    <file baseinstalldir="Text" name="SH.php" role="php">
-     <tasks:replace from="@package_version@" to="version" type="package-info" />
-    </file>
-    <file baseinstalldir="Text" name="SQL.php" role="php">
-     <tasks:replace from="@package_version@" to="version" type="package-info" />
-    </file>
-    <file baseinstalldir="Text" name="VBSCRIPT.php" role="php">
-     <tasks:replace from="@package_version@" to="version" type="package-info" />
-    </file>
-    <file baseinstalldir="Text" name="XML.php" role="php">
-     <tasks:replace from="@package_version@" to="version" type="package-info" />
-    </file>
-   </dir> <!-- //Highlighter -->
-   <file baseinstalldir="Text" name="abap.xml" role="data" />
-   <file baseinstalldir="Text" name="cpp.xml" role="data" />
-   <file baseinstalldir="Text" name="css.xml" role="data" />
-   <file baseinstalldir="Text" name="diff.xml" role="data" />
-   <file baseinstalldir="Text" name="dtd.xml" role="data" />
-   <file baseinstalldir="Text/Highlighter" name="generate" role="script">
+   <file baseinstalldir="/" md5sum="e0e277309d31dda1210243066995f0a5" name="Text/Highlighter.php" role="php" />
+   <file baseinstalldir="/" md5sum="61ab97888d9e0032cd45b347377958ba" name="Text/Highlighter/ABAP.php" role="php" />
+   <file baseinstalldir="/" md5sum="bc8a8d4cf4290a996f61cf24d266180c" name="Text/Highlighter/AVRC.php" role="php" />
+   <file baseinstalldir="/" md5sum="9b72d97d8aca1bc268d9bdfbacff9cdf" name="Text/Highlighter/CPP.php" role="php" />
+   <file baseinstalldir="/" md5sum="219ca3ebfd06d2a5b89fc4dd3aeccdeb" name="Text/Highlighter/CSS.php" role="php" />
+   <file baseinstalldir="/" md5sum="91daf42577f7587821347fba78ba43af" name="Text/Highlighter/DIFF.php" role="php" />
+   <file baseinstalldir="/" md5sum="97538ae715cc825db075598c7c265f1b" name="Text/Highlighter/DTD.php" role="php" />
+   <file baseinstalldir="/" md5sum="f2b5d12dd9c381a37e52d6046a30b7a1" name="Text/Highlighter/Generator.php" role="php" />
+   <file baseinstalldir="/" md5sum="8391bcd2bdd72b6776665fedb8b33c6d" name="Text/Highlighter/HTML.php" role="php" />
+   <file baseinstalldir="/" md5sum="a67deb43bf4e964220152cb424935c15" name="Text/Highlighter/JAVA.php" role="php" />
+   <file baseinstalldir="/" md5sum="ef1109e7c038483f30c7d2feebe59a92" name="Text/Highlighter/JAVASCRIPT.php" role="php" />
+   <file baseinstalldir="/" md5sum="a5866aa7dec350ddffe387fb3eb6af67" name="Text/Highlighter/MYSQL.php" role="php" />
+   <file baseinstalldir="/" md5sum="405f0f23c6fdc286ab517968d88d4684" name="Text/Highlighter/PERL.php" role="php" />
+   <file baseinstalldir="/" md5sum="77112942b15775dd714934e9ebdfb196" name="Text/Highlighter/PHP.php" role="php" />
+   <file baseinstalldir="/" md5sum="55ccb245e507729044a8fc446eaa89c3" name="Text/Highlighter/PYTHON.php" role="php" />
+   <file baseinstalldir="/" md5sum="c35336d39bd7289ff5a841201469ea5e" name="Text/Highlighter/Renderer.php" role="php" />
+   <file baseinstalldir="/" md5sum="f62760c0c21adfad2fa1c126f846a763" name="Text/Highlighter/RUBY.php" role="php" />
+   <file baseinstalldir="/" md5sum="8970b09055bbe60e2c6d99557974d0e4" name="Text/Highlighter/SH.php" role="php" />
+   <file baseinstalldir="/" md5sum="5a633b0c8edcc43e3a70ceca8f4e68f7" name="Text/Highlighter/SQL.php" role="php" />
+   <file baseinstalldir="/" md5sum="ea03c17535e1591ef9a565aa969d2487" name="Text/Highlighter/VBSCRIPT.php" role="php" />
+   <file baseinstalldir="/" md5sum="2dfa9ddba5436bad163754ca9a0cbb0e" name="Text/Highlighter/XML.php" role="php" />
+   <file baseinstalldir="/" md5sum="8e08a91158bcdab22481db20a2065c7c" name="Text/Highlighter/Renderer/Array.php" role="php" />
+   <file baseinstalldir="/" md5sum="ddb689cd736b37b0d785cbf1245c2b39" name="Text/Highlighter/Renderer/BB.php" role="php" />
+   <file baseinstalldir="/" md5sum="2452372774f83d7e575df1ab6c9ce614" name="Text/Highlighter/Renderer/Console.php" role="php" />
+   <file baseinstalldir="/" md5sum="500d621afc6521afe727987c28e65e6c" name="Text/Highlighter/Renderer/Html.php" role="php" />
+   <file baseinstalldir="/" md5sum="93bde1e6121d7f008941cb36aa85144a" name="Text/Highlighter/Renderer/HtmlTags.php" role="php" />
+   <file baseinstalldir="/" md5sum="05dd02b0972f3f6529670786c9bd726d" name="Text/Highlighter/Renderer/JSON.php" role="php" />
+   <file baseinstalldir="/" md5sum="75dea95fc64159fa867958a9943d04ec" name="Text/Highlighter/Renderer/XML.php" role="php" />
+   <file baseinstalldir="Text" md5sum="65481f37ac5dc610c8a083f9885333c0" name="abap.xml" role="data" />
+   <file baseinstalldir="/" md5sum="3df6dc28a01d1ca8f13e05e53163695a" name="avrc.xml" role="data" />
+   <file baseinstalldir="Text" md5sum="138a0a96d4dbccad5fedfbb798a518eb" name="cpp.xml" role="data" />
+   <file baseinstalldir="Text" md5sum="c2b71ff257aa38a4acf196f72f581784" name="css.xml" role="data" />
+   <file baseinstalldir="Text" md5sum="ef8b8ea4b1a10c13835e7a69b51d52cf" name="diff.xml" role="data" />
+   <file baseinstalldir="Text" md5sum="4407626e204d4f94616c1d45dfe3bdee" name="dtd.xml" role="data" />
+   <file baseinstalldir="" md5sum="7ec0a76c6c6fbbbbf318a61ff3bf6687" name="generate" role="script">
     <tasks:replace from="@php_dir@" to="php_dir" type="pear-config" />
     <tasks:replace from="@php_bin@" to="php_bin" type="pear-config" />
    </file>
-   <file baseinstalldir="Text/Highlighter" name="generate.bat" role="script">
+   <file baseinstalldir="" md5sum="730cc9cf3d9345ae255decaeca089445" name="generate.bat" role="script">
     <tasks:replace from="@bin_dir@" to="bin_dir" type="pear-config" />
     <tasks:replace from="@php_bin@" to="php_bin" type="pear-config" />
     <tasks:replace from="@php_dir@" to="php_dir" type="pear-config" />
    </file>
-   <file baseinstalldir="Text" name="Highlighter.php" role="php">
-    <tasks:replace from="@package_version@" to="version" type="package-info" />
-   </file>
-   <file baseinstalldir="Text" name="html.xml" role="data" />
-   <file baseinstalldir="Text" name="java.xml" role="data" />
-   <file baseinstalldir="Text" name="javascript.xml" role="data" />
-   <file baseinstalldir="Text" name="mysql.xml" role="data" />
-   <file baseinstalldir="Text" name="perl.xml" role="data" />
-   <file baseinstalldir="Text" name="php.xml" role="data" />
-   <file baseinstalldir="Text" name="python.xml" role="data" />
-   <file baseinstalldir="Text" name="README" role="doc" />
-   <file baseinstalldir="Text" name="ruby.xml" role="data" />
-   <file baseinstalldir="Text" name="sample.css" role="data" />
-   <file baseinstalldir="Text" name="sh.xml" role="data" />
-   <file baseinstalldir="Text" name="sql.xml" role="data" />
-   <file baseinstalldir="Text" name="TODO" role="data" />
-   <file baseinstalldir="Text" name="vbscript.xml" role="data" />
-   <file baseinstalldir="Text" name="xml.xml" role="data" />
-  </dir> <!-- / -->
+   <file baseinstalldir="Text" md5sum="1834841c5113cf7aa089c6617cca2e59" name="html.xml" role="data" />
+   <file baseinstalldir="Text" md5sum="f751bd91f1045caef574f73d5e47aa38" name="java.xml" role="data" />
+   <file baseinstalldir="Text" md5sum="ca1051c918e4495d917a543e32e75d2d" name="javascript.xml" role="data" />
+   <file baseinstalldir="Text" md5sum="92d0b8becf681ef3abbff2b62dc6fc2f" name="mysql.xml" role="data" />
+   <file baseinstalldir="Text" md5sum="ec55d942df3941d23522135db5e60e37" name="perl.xml" role="data" />
+   <file baseinstalldir="Text" md5sum="371ee513b60f7017cba209f357612dc4" name="php.xml" role="data" />
+   <file baseinstalldir="Text" md5sum="9a8a6d6cb820eade418dedfd6976b11a" name="python.xml" role="data" />
+   <file baseinstalldir="Text" md5sum="ee5e6f2f7e62a9db0e9efa87d983bd16" name="README" role="doc" />
+   <file baseinstalldir="/" md5sum="6cbb6a628581b145993ab8ebc93fbad3" name="release" role="data" />
+   <file baseinstalldir="Text" md5sum="49d4e8cdede594edd85cec83b3445418" name="ruby.xml" role="data" />
+   <file baseinstalldir="Text" md5sum="99120e54b1295956f7f4063613779b3b" name="sample.css" role="data" />
+   <file baseinstalldir="Text" md5sum="a9f9a3ba7b644f5e774d68bde38ca1b0" name="sh.xml" role="data" />
+   <file baseinstalldir="Text" md5sum="820fad173c503e2b9b20b44ecfe97333" name="sql.xml" role="data" />
+   <file baseinstalldir="Text" md5sum="54a9d93c2b68def655ff1fb3fc30af6b" name="TODO" role="data" />
+   <file baseinstalldir="Text" md5sum="a001c93f9e4db49b4c62a6aa1cb6e56a" name="vbscript.xml" role="data" />
+   <file baseinstalldir="Text" md5sum="9e72e6d98806e845b22de7e04efb197c" name="xml.xml" role="data" />
+  </dir>
  </contents>
  <dependencies>
   <required>
@@ -200,9 +140,7 @@ a new class.
     <name>(*ix|*ux)</name>
    </os>
   </installconditions>
-  <filelist>
-   <ignore name="generate.bat" />
-  </filelist>
+  <filelist />
  </phprelease>
  <phprelease>
   <installconditions>
@@ -210,14 +148,12 @@ a new class.
     <name>windows</name>
    </os>
   </installconditions>
-  <filelist>
-   <ignore name="generate" />
-  </filelist>
+  <filelist />
  </phprelease>
  <phprelease>
   <filelist>
-   <ignore name="generate" />
-   <ignore name="generate.bat" />
+   <install as="generate" name="generate" />
+   <install as="generate.bat" name="generate.bat" />
   </filelist>
  </phprelease>
  <changelog>
@@ -230,12 +166,12 @@ a new class.
     <release>beta</release>
     <api>beta</api>
    </stability>
-   <date>2008-01-01</date>
+   <date>2011-12-09</date>
    <license uri="http://www.php.net/license">PHP License</license>
-   <notes>- added new syntax definition - VBScript, thanks to sirzooro (Daniel Fruzynski)
+   <notes>
+- added new syntax definition - VBScript, thanks to sirzooro (Daniel Fruzynski)
 - fixed bug #12284 (hex numbers not recognized in JS)
 - fixed bug #12085 (comments not recognized in CSS)
-    
    </notes>
   </release>
  </changelog>
