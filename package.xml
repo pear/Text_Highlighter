@@ -30,10 +30,10 @@ a new class.</description>
   <email>demenev@gmail.com</email>
   <active>yes</active>
  </lead>
- <date>2011-12-09</date>
- <time>19:04:38</time>
+ <date>2011-12-11</date>
+ <time>00:36:42</time>
  <version>
-  <release>0.7.1</release>
+  <release>0.7.2</release>
   <api>0.7.1</api>
  </version>
  <stability>
@@ -42,9 +42,9 @@ a new class.</description>
  </stability>
  <license uri="http://www.php.net/license">PHP License</license>
  <notes>
-- added new syntax definition - VBScript, thanks to sirzooro (Daniel Fruzynski)
-- fixed bug #12284 (hex numbers not recognized in JS)
-- fixed bug #12085 (comments not recognized in CSS)
+QA Release
+Bug #18304 Bug in CPP highlighting
+Bug #14560 yields warnings from E_STRICT
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
@@ -72,9 +72,12 @@ a new class.</description>
    <file baseinstalldir="/" md5sum="8e08a91158bcdab22481db20a2065c7c" name="Text/Highlighter/Renderer/Array.php" role="php" />
    <file baseinstalldir="/" md5sum="ddb689cd736b37b0d785cbf1245c2b39" name="Text/Highlighter/Renderer/BB.php" role="php" />
    <file baseinstalldir="/" md5sum="2452372774f83d7e575df1ab6c9ce614" name="Text/Highlighter/Renderer/Console.php" role="php" />
-   <file baseinstalldir="/" md5sum="500d621afc6521afe727987c28e65e6c" name="Text/Highlighter/Renderer/Html.php" role="php" />
+   <file baseinstalldir="/" md5sum="d005a7696c43ac027a428e59d441faf8" name="Text/Highlighter/Renderer/Html.php" role="php" />
+   <file baseinstalldir="/" md5sum="d005a7696c43ac027a428e59d441faf8" name="Text/Highlighter/Renderer/Html.php.orig" role="data" />
+   <file baseinstalldir="/" md5sum="e79d81c94be499344039a784b8b3d04f" name="Text/Highlighter/Renderer/Html.php.rej" role="data" />
    <file baseinstalldir="/" md5sum="93bde1e6121d7f008941cb36aa85144a" name="Text/Highlighter/Renderer/HtmlTags.php" role="php" />
    <file baseinstalldir="/" md5sum="05dd02b0972f3f6529670786c9bd726d" name="Text/Highlighter/Renderer/JSON.php" role="php" />
+   <file baseinstalldir="/" md5sum="d75b4650ed8624ea0319d1deb4cbed64" name="Text/Highlighter/Renderer/patch-download.php?id=11172&patch=Html.php.diff&revision=1193344765" role="data" />
    <file baseinstalldir="/" md5sum="75dea95fc64159fa867958a9943d04ec" name="Text/Highlighter/Renderer/XML.php" role="php" />
    <file baseinstalldir="Text" md5sum="65481f37ac5dc610c8a083f9885333c0" name="abap.xml" role="data" />
    <file baseinstalldir="/" md5sum="3df6dc28a01d1ca8f13e05e53163695a" name="avrc.xml" role="data" />
@@ -172,6 +175,23 @@ a new class.</description>
 - added new syntax definition - VBScript, thanks to sirzooro (Daniel Fruzynski)
 - fixed bug #12284 (hex numbers not recognized in JS)
 - fixed bug #12085 (comments not recognized in CSS)
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.7.2</release>
+    <api>0.7.1</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2011-12-11</date>
+   <license uri="http://www.php.net/license">PHP License</license>
+   <notes>
+QA Release
+Bug #18304 Bug in CPP highlighting
+Bug #14560 yields warnings from E_STRICT
    </notes>
   </release>
  </changelog>
