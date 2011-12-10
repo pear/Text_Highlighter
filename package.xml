@@ -31,7 +31,7 @@ a new class.</description>
   <active>yes</active>
  </lead>
  <date>2011-12-11</date>
- <time>00:36:42</time>
+ <time>00:38:53</time>
  <version>
   <release>0.7.2</release>
   <api>0.7.1</api>
@@ -77,7 +77,6 @@ Bug #14560 yields warnings from E_STRICT
    <file baseinstalldir="/" md5sum="e79d81c94be499344039a784b8b3d04f" name="Text/Highlighter/Renderer/Html.php.rej" role="data" />
    <file baseinstalldir="/" md5sum="93bde1e6121d7f008941cb36aa85144a" name="Text/Highlighter/Renderer/HtmlTags.php" role="php" />
    <file baseinstalldir="/" md5sum="05dd02b0972f3f6529670786c9bd726d" name="Text/Highlighter/Renderer/JSON.php" role="php" />
-   <file baseinstalldir="/" md5sum="d75b4650ed8624ea0319d1deb4cbed64" name="Text/Highlighter/Renderer/patch-download.php?id=11172&patch=Html.php.diff&revision=1193344765" role="data" />
    <file baseinstalldir="/" md5sum="75dea95fc64159fa867958a9943d04ec" name="Text/Highlighter/Renderer/XML.php" role="php" />
    <file baseinstalldir="Text" md5sum="65481f37ac5dc610c8a083f9885333c0" name="abap.xml" role="data" />
    <file baseinstalldir="/" md5sum="3df6dc28a01d1ca8f13e05e53163695a" name="avrc.xml" role="data" />
@@ -151,9 +150,6 @@ Bug #14560 yields warnings from E_STRICT
     <name>windows</name>
    </os>
   </installconditions>
-  <filelist />
- </phprelease>
- <phprelease>
   <filelist>
    <install as="generate" name="generate" />
    <install as="generate.bat" name="generate.bat" />
