@@ -30,10 +30,10 @@ a new class.</description>
   <email>demenev@gmail.com</email>
   <active>yes</active>
  </lead>
- <date>2011-12-11</date>
- <time>00:38:53</time>
+ <date>2011-12-17</date>
+ <time>07:15:22</time>
  <version>
-  <release>0.7.2</release>
+  <release>0.7.3</release>
   <api>0.7.1</api>
  </version>
  <stability>
@@ -42,9 +42,7 @@ a new class.</description>
  </stability>
  <license uri="http://www.php.net/license">PHP License</license>
  <notes>
-QA Release
-Bug #18304 Bug in CPP highlighting
-Bug #14560 yields warnings from E_STRICT
+Bug #19139 	0.7.2 cannot be installed
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
@@ -134,7 +132,12 @@ Bug #14560 yields warnings from E_STRICT
    </package>
   </required>
  </dependencies>
- <phprelease></phprelease>
+ <phprelease>
+  <filelist>
+   <install as="generate" name="generate" />
+   <install as="generate.bat" name="generate.bat" />
+  </filelist>
+ </phprelease>
  <changelog>
   <release>
    <version>
@@ -168,6 +171,21 @@ Bug #14560 yields warnings from E_STRICT
 QA Release
 Bug #18304 Bug in CPP highlighting
 Bug #14560 yields warnings from E_STRICT
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.7.3</release>
+    <api>0.7.1</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2011-12-17</date>
+   <license uri="http://www.php.net/license">PHP License</license>
+   <notes>
+Bug #19139 	0.7.2 cannot be installed
    </notes>
   </release>
  </changelog>
