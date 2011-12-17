@@ -73,8 +73,6 @@ Bug #14560 yields warnings from E_STRICT
    <file baseinstalldir="/" md5sum="ddb689cd736b37b0d785cbf1245c2b39" name="Text/Highlighter/Renderer/BB.php" role="php" />
    <file baseinstalldir="/" md5sum="2452372774f83d7e575df1ab6c9ce614" name="Text/Highlighter/Renderer/Console.php" role="php" />
    <file baseinstalldir="/" md5sum="d005a7696c43ac027a428e59d441faf8" name="Text/Highlighter/Renderer/Html.php" role="php" />
-   <file baseinstalldir="/" md5sum="d005a7696c43ac027a428e59d441faf8" name="Text/Highlighter/Renderer/Html.php.orig" role="data" />
-   <file baseinstalldir="/" md5sum="e79d81c94be499344039a784b8b3d04f" name="Text/Highlighter/Renderer/Html.php.rej" role="data" />
    <file baseinstalldir="/" md5sum="93bde1e6121d7f008941cb36aa85144a" name="Text/Highlighter/Renderer/HtmlTags.php" role="php" />
    <file baseinstalldir="/" md5sum="05dd02b0972f3f6529670786c9bd726d" name="Text/Highlighter/Renderer/JSON.php" role="php" />
    <file baseinstalldir="/" md5sum="75dea95fc64159fa867958a9943d04ec" name="Text/Highlighter/Renderer/XML.php" role="php" />
@@ -136,25 +134,7 @@ Bug #14560 yields warnings from E_STRICT
    </package>
   </required>
  </dependencies>
- <phprelease>
-  <installconditions>
-   <os>
-    <name>(*ix|*ux)</name>
-   </os>
-  </installconditions>
-  <filelist />
- </phprelease>
- <phprelease>
-  <installconditions>
-   <os>
-    <name>windows</name>
-   </os>
-  </installconditions>
-  <filelist>
-   <install as="generate" name="generate" />
-   <install as="generate.bat" name="generate.bat" />
-  </filelist>
- </phprelease>
+ <phprelease></phprelease>
  <changelog>
   <release>
    <version>
