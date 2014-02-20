@@ -1,0 +1,37 @@
+{
+    "authors": [
+        {
+            "email": "ssttoo@gmail.com",
+            "name": "Stoyan Stefanov",
+            "role": "Lead"
+        },
+        {
+            "email": "demenev@gmail.com",
+            "name": "Andrey Demenev",
+            "role": "Lead"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Text": "./"
+        }
+    },
+    "description": "More info available on: http://pear.php.net/package/Text_Highlighter",
+    "include-path": [
+        "./"
+    ],
+    "license": "PHP License",
+    "name": "pear/text_highlighter",
+    "support": {
+        "issues": "http://pear.php.net/bugs/search.php?cmd=display&package_name[]=Text_Highlighter",
+        "source": "https://github.com/pear/Text_Highlighter"
+    },
+    "type": "library",
+    "require": {
+        "pear/pear_exception": "*",
+        "pear/pear": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    }
+}
