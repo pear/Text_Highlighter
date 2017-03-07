@@ -1,4 +1,6 @@
-# $Id$
+# Text_Highlighter
+
+[![Build Status](https://travis-ci.org/pear/Text_Highlighter.svg?branch=master)](https://travis-ci.org/pear/Text_Highlighter)
 
 Introduction
 ============
@@ -450,6 +452,4 @@ And finally, do the highlighting and get the output:
     $hl = Text_Highlighter::factory('php');
     $hl->setRenderer($renderer);
     $html = $hl->highlight(file_get_contents('example.php'));
-
-# vim: set autoindent tabstop=4 shiftwidth=4 softtabstop=4 tw=78: */
 
