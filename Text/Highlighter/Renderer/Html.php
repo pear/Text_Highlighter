@@ -160,7 +160,7 @@ class Text_Highlighter_Renderer_Html extends Text_Highlighter_Renderer_Array
      *
      * @var string
      */
-    var $_output = '';
+    var $_output_html = '';
 
     /**
      * Mapping of keywords to formatting rules using inline styles
@@ -224,7 +224,7 @@ class Text_Highlighter_Renderer_Html extends Text_Highlighter_Renderer_Array
      */
     function reset()
     {
-        $this->_output = '';
+        $this->_output_html = '';
         if (isset($this->_options['numbers'])) {
             $this->_numbers = (int)$this->_options['numbers'];
             if ($this->_numbers != HL_NUMBERS_LI
@@ -342,7 +342,7 @@ class Text_Highlighter_Renderer_Html extends Text_Highlighter_Renderer_Array
 
             // additional whitespace for browsers that do not display
             // empty list items correctly
-            $this->_output = '<li>&nbsp;' . $html_output . '</li>';
+            $this->_output_html = '<li>&nbsp;' . $html_output . '</li>';
 
             $start = '';
             if ($this->_numbers == HL_NUMBERS_OL && intval($this->_numbers_start) > 0)  {
@@ -355,9 +355,9 @@ class Text_Highlighter_Renderer_Html extends Text_Highlighter_Renderer_Array
             }
 
 
-            $this->_output = '<' . $list_tag . $start
+            $this->_output_html = '<' . $list_tag . $start
                              . ' ' . $this->_getStyling('main', false) . '>'
-                             . $this->_output . '</'. $list_tag .'>';
+                             . $this->_output_html . '</'. $list_tag .'>';
 
         // render a table
         } else if ($this->_numbers == HL_NUMBERS_TABLE) {
@@ -374,16 +374,16 @@ class Text_Highlighter_Renderer_Html extends Text_Highlighter_Renderer_Array
             for ($i=1; $i <= $nlines; $i++) {
                 $numbers .= ($start_number + $i) . "\n";
             }
-            $this->_output = '<table ' . $this->_getStyling('table', false) . ' width="100%"><tr>' .
+            $this->_output_html = '<table ' . $this->_getStyling('table', false) . ' width="100%"><tr>' .
                              '<td '. $this->_getStyling('gutter', false) .' align="right" valign="top">' .
                              '<pre>' . $numbers . '</pre></td><td '. $this->_getStyling('main', false) .
                              ' valign="top"><pre>' .
                              $html_output . '</pre></td></tr></table>';
         }
         if (!$this->_numbers) {
-            $this->_output = '<pre>' . $html_output . '</pre>';
+            $this->_output_html = '<pre>' . $html_output . '</pre>';
         }
-        $this->_output = '<div ' . $this->_getStyling('main', false) . '>' . $this->_output . '</div>';
+        $this->_output_html = '<div ' . $this->_getStyling('main', false) . '>' . $this->_output_html . '</div>';
     }
 
 
@@ -452,6 +452,12 @@ class Text_Highlighter_Renderer_Html extends Text_Highlighter_Renderer_Array
         }
 
     }
+    
+    function getOutput()
+    {
+        return $this->_output_html;
+    }
+
 }
 
 /*
