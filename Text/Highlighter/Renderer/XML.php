@@ -52,7 +52,13 @@ class Text_Highlighter_Renderer_XML extends Text_Highlighter_Renderer_Array
      */
     var $_serializer_options = array();
 
-
+    /**
+     * Highlighted code
+     *
+     * @var string
+     */
+    var $_output_xml = '';
+    
     /**
      * Resets renderer state
      *
@@ -86,10 +92,21 @@ class Text_Highlighter_Renderer_XML extends Text_Highlighter_Renderer_Array
         $serializer = new XML_Serializer($this->_serializer_options);
         $result = $serializer->serialize($output);
         if ($result === true) {
-            $this->_output = $serializer->getSerializedData();
+            $this->_output_xml = $serializer->getSerializedData();
         }
     }
 
+     /**
+     * Get generated output
+     *
+     * @abstract
+     * @return array Highlighted code as an array
+     * @access public
+     */
+    function getOutput()
+    {
+        return $this->_output_xml;
+    }
 
 }
 

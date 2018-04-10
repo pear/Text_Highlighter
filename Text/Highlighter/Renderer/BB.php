@@ -128,6 +128,14 @@ class Text_Highlighter_Renderer_BB extends Text_Highlighter_Renderer_Array
         'inlinetags' => 'Blue',
     );
 
+    /**
+     * Highlighted code
+     *
+     * @var string
+     */
+    var $_output_bb = '';
+    
+    
     /**#@-*/
 
     /**
@@ -203,18 +211,18 @@ class Text_Highlighter_Renderer_BB extends Text_Highlighter_Renderer_Array
             $item_tag = $this->_tag_brackets['start'] .
                         $this->_bb_tags['list_item'] .
                         $this->_tag_brackets['end'];
-            $this->_output = $item_tag . str_replace("\n", "\n". $item_tag .' ', $bb_output);
-            $this->_output = $this->_tag_brackets['start'] .
+            $this->_output_bb = $item_tag . str_replace("\n", "\n". $item_tag .' ', $bb_output);
+            $this->_output_bb = $this->_tag_brackets['start'] .
                              $this->_bb_tags['list'] .
                              $this->_tag_brackets['end'] .
-                             $this->_output .
+                             $this->_output_bb .
                              $this->_tag_brackets['start'] .
                              '/'.
                              $this->_bb_tags['list'] .
                              $this->_tag_brackets['end']
                              ;
         } else {
-            $this->_output = $this->_tag_brackets['start'] .
+            $this->_output_bb = $this->_tag_brackets['start'] .
                              $this->_bb_tags['code'] .
                              $this->_tag_brackets['end'] .
                              $bb_output .
@@ -224,6 +232,19 @@ class Text_Highlighter_Renderer_BB extends Text_Highlighter_Renderer_Array
                              $this->_tag_brackets['end'];
         }
     }
+
+     /**
+     * Get generated output
+     *
+     * @abstract
+     * @return array Highlighted code as an array
+     * @access public
+     */
+    function getOutput()
+    {
+        return $this->_output_bb;
+    }
+
 
 }
 

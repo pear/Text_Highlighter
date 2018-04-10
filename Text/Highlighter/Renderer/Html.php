@@ -453,6 +453,13 @@ class Text_Highlighter_Renderer_Html extends Text_Highlighter_Renderer_Array
 
     }
     
+     /**
+     * Get generated output
+     *
+     * @abstract
+     * @return array Highlighted code as an array
+     * @access public
+     */
     function getOutput()
     {
         return $this->_output_html;

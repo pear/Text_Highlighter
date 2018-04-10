@@ -42,6 +42,14 @@ require_once 'Text/Highlighter/Renderer/Array.php';
 class Text_Highlighter_Renderer_JSON extends Text_Highlighter_Renderer_Array
 {
 
+
+    /**
+     * Highlighted code
+     *
+     * @var string
+     */
+    var $_output_json = '';
+
     /**
      * Signals that no more tokens are available
      *
@@ -67,9 +75,21 @@ class Text_Highlighter_Renderer_JSON extends Text_Highlighter_Renderer_Array
 
         }
 
-        $this->_output  = '['. implode(',', $json_array) .']';
-        $this->_output = str_replace("\n", '\n', $this->_output);
+        $this->_output_json  = '['. implode(',', $json_array) .']';
+        $this->_output_json = str_replace("\n", '\n', $this->_output);
 
+    }
+
+     /**
+     * Get generated output
+     *
+     * @abstract
+     * @return array Highlighted code as an array
+     * @access public
+     */
+    function getOutput()
+    {
+        return $this->_output_json;
     }
 
 
