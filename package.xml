@@ -30,11 +30,11 @@ a new class.</description>
   <email>demenev@gmail.com</email>
   <active>yes</active>
  </lead>
- <date>2011-12-17</date>
- <time>07:15:22</time>
+
+ <date>2017-03-07</date>
  <version>
-  <release>0.7.3</release>
-  <api>0.7.1</api>
+  <release>0.8.0</release>
+  <api>0.8.0</api>
  </version>
  <stability>
   <release>beta</release>
@@ -42,8 +42,12 @@ a new class.</description>
  </stability>
  <license uri="http://www.php.net/license">PHP License</license>
  <notes>
-Bug #19139 	0.7.2 cannot be installed
+* Set minimum PHP version to 5.4.0
+* Set minimum PEAR version to 1.10.1
+
+* PHP7 compatibility: replace preg_replace with e modifier
  </notes>
+
  <contents>
   <dir baseinstalldir="/" name="/">
    <file baseinstalldir="/" md5sum="e0e277309d31dda1210243066995f0a5" name="Text/Highlighter.php" role="php" />
@@ -96,7 +100,7 @@ Bug #19139 	0.7.2 cannot be installed
    <file baseinstalldir="Text" md5sum="ec55d942df3941d23522135db5e60e37" name="perl.xml" role="data" />
    <file baseinstalldir="Text" md5sum="371ee513b60f7017cba209f357612dc4" name="php.xml" role="data" />
    <file baseinstalldir="Text" md5sum="9a8a6d6cb820eade418dedfd6976b11a" name="python.xml" role="data" />
-   <file baseinstalldir="Text" md5sum="ee5e6f2f7e62a9db0e9efa87d983bd16" name="README" role="doc" />
+   <file baseinstalldir="Text" md5sum="ee5e6f2f7e62a9db0e9efa87d983bd16" name="README.md" role="doc" />
    <file baseinstalldir="/" md5sum="6cbb6a628581b145993ab8ebc93fbad3" name="release" role="data" />
    <file baseinstalldir="Text" md5sum="49d4e8cdede594edd85cec83b3445418" name="ruby.xml" role="data" />
    <file baseinstalldir="Text" md5sum="99120e54b1295956f7f4063613779b3b" name="sample.css" role="data" />
@@ -110,25 +114,25 @@ Bug #19139 	0.7.2 cannot be installed
  <dependencies>
   <required>
    <php>
-    <min>4.3.3</min>
+    <min>5.4.0</min>
    </php>
    <pearinstaller>
-    <min>1.4.0b1</min>
+    <min>1.10.1</min>
    </pearinstaller>
    <package>
     <name>PEAR</name>
     <channel>pear.php.net</channel>
-    <min>1.0</min>
+    <min>1.10.3</min>
    </package>
    <package>
     <name>XML_Parser</name>
     <channel>pear.php.net</channel>
-    <min>1.0.1</min>
+    <min>1.3.7</min>
    </package>
    <package>
     <name>Console_Getopt</name>
     <channel>pear.php.net</channel>
-    <min>1.0</min>
+    <min>1.4.1</min>
    </package>
   </required>
  </dependencies>
@@ -139,6 +143,7 @@ Bug #19139 	0.7.2 cannot be installed
   </filelist>
  </phprelease>
  <changelog>
+
   <release>
    <version>
     <release>0.7.1</release>
@@ -156,6 +161,7 @@ Bug #19139 	0.7.2 cannot be installed
 - fixed bug #12085 (comments not recognized in CSS)
    </notes>
   </release>
+
   <release>
    <version>
     <release>0.7.2</release>
@@ -173,6 +179,7 @@ Bug #18304 Bug in CPP highlighting
 Bug #14560 yields warnings from E_STRICT
    </notes>
   </release>
+
   <release>
    <version>
     <release>0.7.3</release>
@@ -188,5 +195,25 @@ Bug #14560 yields warnings from E_STRICT
 Bug #19139 	0.7.2 cannot be installed
    </notes>
   </release>
+
+  <release>
+   <version>
+    <release>0.8.0</release>
+    <api>0.8.0</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2017-03-07</date>
+   <license uri="http://www.php.net/license">PHP License</license>
+   <notes>
+* Set minimum PHP version to 5.4.0
+* Set minimum PEAR version to 1.10.1
+
+* PHP7 compatibility: replace preg_replace with e modifier
+   </notes>
+  </release>
+
  </changelog>
 </package>
