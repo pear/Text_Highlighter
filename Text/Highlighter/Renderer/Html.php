@@ -224,6 +224,7 @@ class Text_Highlighter_Renderer_Html extends Text_Highlighter_Renderer_Array
      */
     function reset()
     {
+	parent::reset();
         $this->_output_html = '';
         if (isset($this->_options['numbers'])) {
             $this->_numbers = (int)$this->_options['numbers'];

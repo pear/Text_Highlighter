@@ -6,3 +6,4 @@ vendor
 *.tgz
 
 build/
+/nbproject/
