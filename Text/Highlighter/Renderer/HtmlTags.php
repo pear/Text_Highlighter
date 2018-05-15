@@ -103,6 +103,14 @@ class Text_Highlighter_Renderer_HtmlTags extends Text_Highlighter_Renderer_Array
         'inlinetags' => '',
     );
 
+    /**
+     * Highlighted code
+     *
+     * @var string
+     */
+    var $_output_html = '';
+    
+    
     /**#@-*/
 
     /**
@@ -167,12 +175,23 @@ class Text_Highlighter_Renderer_HtmlTags extends Text_Highlighter_Renderer_Array
             /* additional whitespace for browsers that do not display
             empty list items correctly */
             $html_output = '<li>&nbsp;' . str_replace("\n", "</li>\n<li>&nbsp;", $html_output) . '</li>';
-            $this->_output = '<ol>' . str_replace(' ', '&nbsp;', $html_output) . '</ol>';
+            $this->_output_html = '<ol>' . str_replace(' ', '&nbsp;', $html_output) . '</ol>';
         } else {
-            $this->_output = '<pre>' . $html_output . '</pre>';
+            $this->_output_html = '<pre>' . $html_output . '</pre>';
         }
     }
-
+    
+     /**
+     * Get generated output
+     *
+     * @abstract
+     * @return array Highlighted code as an array
+     * @access public
+     */
+    function getOutput()
+    {
+        return $this->_output_html;
+    }
 
 }
 
