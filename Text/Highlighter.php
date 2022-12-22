@@ -92,6 +92,7 @@ define ('HL_INFINITY',      1000000000);
  * @access public
  */
 
+#[AllowDynamicProperties]
 class Text_Highlighter
 {
     // {{{ members
