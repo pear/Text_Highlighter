@@ -33,6 +33,7 @@
  * @abstract
  */
 
+#[AllowDynamicProperties]
 class Text_Highlighter_Renderer
 {
     /**
